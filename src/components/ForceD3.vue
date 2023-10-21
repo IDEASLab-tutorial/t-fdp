@@ -186,8 +186,8 @@ export default {
         },
 
       getData(name) {
-       
-          this.$axios.get("./../../static/data/" + name + ".json")
+          this.$axios.get(window.location.href + "/static/data/" + name + ".json")
+          
           .then(result => {
               console.log("d3 getdata", result.data)
               this.data = result.data

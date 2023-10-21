@@ -124,7 +124,7 @@ export default {
       alphastart: 1.0,
       alphamin: 0.01,
       colors: [
-        [31, 119, 180],
+        [49, 130, 189],
         [255, 127, 14],
         [44, 160, 44],
         [214, 39, 40],
@@ -171,7 +171,7 @@ export default {
       console.log("my get data ing");
 
       this.$axios
-        .get("./../../static/data/" + name + ".json")
+        .get(window.location.href + "/static/data/" + name + ".json")
         .then((result) => {
           this.data = result.data;
           // console.log("getdata", this.data);

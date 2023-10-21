@@ -103,8 +103,7 @@ export default {
     },
     getData(name) {
 // console.log("my get data ing")
-       
-          this.$axios.get("./../../static/data/" + name + ".json")
+          this.$axios.get(window.location.href + "/static/data/" + name + ".json")
           .then(result => {
               this.data = result.data
               console.log(" 2 force getdata", this.data)
